@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trade history</title>
+    <script type="text/javascript">
+        setTimeout(function(){
+            window.location.reload(1);
+        }, 60000); // 60 seconds
+    </script>
+    <style>
+        body {
+            background-color: black; /* Set the background color of the body to black */
+            color: white; /* Set the text color to white */
+        }
+        .data {
+            border-collapse: collapse;
+            border: 2px solid;
+            width: 100%;
+        }
+        .data th {
+            background-color: #666540;
+            border: 2px solid white;
+            padding: 8px;
+            text-align: center;
+            font-size: 26px;
+        
+        .data td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+            font-size: 20px;
+        }   
+    </style>
+</head>
+<body>
+    <h2>Trades executed till now</h2>
+    
+    {% for table in tables %}
+        {{ table|safe }}
+    {% endfor %}
+
+    {{ message|safe }}
+    
+</body>
+</html>

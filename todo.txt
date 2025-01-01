@@ -1,0 +1,46 @@
+
+
+Give me a binance futures trading bot in USD-m futures on the perpetual contracts of 
+BTCUSDT using the binance-futures-connector-python library and generated api_key
+with the below set values
+
+TSL = 0.01
+volume = 5 USDT
+leverage = 5 times
+type = 'ISOLATED'
+clinet = UMFutures()
+
+import binance.um_futures
+from binance.error import ClientError
+.
+The bot should have the following below mentioned functionalities which 
+are coded within separate python functions
+1) GET_ACCOUNT_BALANCE() function =  Should fetch the remaining balance USDT left out in the account and
+print it everytime the program fetches the kline candle data for every 60 seconds
+2) Use EMA_CALCULATOR() function = to calculate EMA using pandas_ta library
+def EMA_CALCULATOR(df, length):
+    return ta.ema(df['hl2'].astype(float), length=length)
+2) DATA_FETCHER() function = download the last 40, 1 minute kline canlde data and this function should be called every 60 seconds
+then also add the 2 extra columns df['ema_5'] & df['ema_34'] which has the 5 and 34 ema values stored in it caluclatd using the EMA_CALCULATOR
+function
+3) SET_LEVERAGE() function = should set leverage for the symbol = BTCUSDT and leverage = leverage variable as mentioned above 
+and should act as a trialing stoploss  
+4) SET_MARGIN_TYPE() function = this would set the margin type to mode = type variable as set above
+5) GET_PRICE_PRECISION() function = this would get the price precision
+6) GET_QUANTITY_PRECISION() function = this would get the quantity precision
+7) OPEN_ORDER() function = this would place buy or sell order, this would get the following values before placing a order 
+price = using client instance, 
+qty_precision = GET_QUANTITY_PRECISION
+price_precistion = GET_PRICE_PRECISION
+use the imported ClientError if the program is returning any error while placing the order using try & except case here
+8) CHECK_POSITIONS() = checks for any active live positions and prints its details, when the program runs for the first time only
+9) CLOSE_OPEN_ORDER() function = closes the open orders, which are found when the program runs for the first time only
+10) TRADING_ALGO() = will contain the Trading logic of long_enty and short_entry
+long_entry_condition = when 5ema > 34ema 
+short_entry_condition = when 34ema > 5ema 
+
+while loop():
+*) This loop should run once every 60 seconds
+*) when the program is run for the first time, it should first check for any pre existing open position and should close it
+*) print the account current account balance
+*) check if the entry conditions are met, if yes enter a trade
