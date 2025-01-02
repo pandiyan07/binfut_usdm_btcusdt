@@ -175,8 +175,8 @@ def CHECK_ORDER_STATUS(client,symbol,ids, ids_name):
         #print('id = ',id)
         if order_status:
             for os in order_status:
-                print(f'THE SPECIFIC ORDER STATUS IS => orderId = {os['orderId']}, type = {os['type']}, Cumulative Margin = {os['cumQuote']}')
-                print(f' origQty = {os['origQty']}, stopPrice = {os['stopPrice']}, updateTime = {os['updateTime']}')
+                print(f"THE SPECIFIC ORDER STATUS IS => orderId = {os['orderId']}, type = {os['type']}, Cumulative Margin = {os['cumQuote']}")
+                print(f"origQty = {os['origQty']}, stopPrice = {os['stopPrice']}, updateTime = {os['updateTime']}")
         else:
             print(order_status,' a EMPTY LIST RESPONSE from the order_status variable maplaaaaaaaaaaaaaaaaaaaa = \n\n')
         
