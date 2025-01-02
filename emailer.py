@@ -50,7 +50,7 @@ def EMAIL_SENDER(status,argument):
         msg.attach(MIMEText(body, 'plain'))
         
     if status == 'ERROR':
-        subject = "ERROR WHILE RUNNING THE RENDER TRADING BOT"
+        subject = "ERROR IN THE RENDER TRADING BOT"
         body = f"This Error popped up on {current_time.strftime('%Y-%m-%d')} at {current_time.strftime('%H:%M:%S')} = <br> {argument}"
         body2 = f"Please find the attached trading bot log file located at = {log_file_path}"
         # Attach the body text
