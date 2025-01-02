@@ -38,13 +38,13 @@ def EMAIL_SENDER(status,argument):
     current_time = datetime.now()
     
     if status == 'ORDER PLACED':
-        subject = f"OPENED A {argument} ORDER"
+        subject = f"OPENED A ORDER"
         body = f"{argument} open order placed at = {current_time.strftime('%Y-%m-%d')} at  {current_time.strftime('%H:%M:%S')}" 
         # Attach the body text
         msg.attach(MIMEText(body, 'plain'))
     
     if status == 'ORDER CLOSED':
-        subject = f"CLOSED A {argument} ORDER"
+        subject = f"CLOSED A ORDER"
         body = f"{argument} close order placed at = {current_time.strftime('%Y-%m-%d')} at  {current_time.strftime('%H:%M:%S')}" 
         # Attach the body text
         msg.attach(MIMEText(body, 'plain'))
@@ -90,13 +90,13 @@ def EMAIL_SENDER(status,argument):
         else:
             print("Could not retrieve my current IP address = ", my_ip)
         
-        subject = "SERVER HAS STARTED RUNNING IN RENDER"
+        subject = "TRADING PYTHON BOT IN RENDER HAS STARTED RUNNING"
         body = f"{my_ip} = Program has started running on {current_time.strftime('%Y-%m-%d')} at  {current_time.strftime('%H:%M:%S')}" 
         # Attach the body text
         msg.attach(MIMEText(body, 'plain'))
     
     if status == 'DUMP':
-        subject = "PANDIYAN'S DAILY TRADING REPORT"
+        subject = "PANDIYAN'S DAILY RENDER TRADING REPORT"
         body = "Please find the attached trading report for today's session as well as the table below."
         trade_log_df = argument
         # Convert DataFrame to HTML and attach it in the body
