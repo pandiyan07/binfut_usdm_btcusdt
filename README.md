@@ -37,6 +37,7 @@ Deployed as a Flask web application (suitable for platforms like Render.com), it
 ## Project Structure
 binfut_usdm_btcusdt-main/
 ├── main.py                          # Flask app, scheduler, main orchestration
+
 ├── data_fetcher.py                  # REST + WebSocket data fetching
 ├── indicator_calculation.py         # EMA & ATR calculations
 ├── trading_rules.py                 # Entry condition logic
