@@ -300,6 +300,20 @@ The project follows a modular architecture, making it easy to extend with:
 
 ---
 
+# ⚠️ Disclaimer
+
+This project is intended for educational and research purposes only.
+
+Cryptocurrency trading involves significant financial risk. Use this software at your own risk. The author is not responsible for any financial losses resulting from the use of this trading bot.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
 ## ⭐ Support the Project
 
 If you find this project useful, consider giving it a **⭐ Star** on GitHub. Contributions, suggestions, and pull requests are always welcome!
