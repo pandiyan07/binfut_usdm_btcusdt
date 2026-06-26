@@ -1,4 +1,4 @@
-# 🚀 Binance USD-M Futures BTCUSDT Trading Bot
+# 🚀 Binance USD-M Futures BTCUSDT Trading Algobot Complete Full version
 
 A robust and fully automated trading bot for **Binance USD-M Futures** perpetual contracts on **BTCUSDT**, built using the official **Binance Futures Connector for Python** (`binance-futures-connector-python`).
 
