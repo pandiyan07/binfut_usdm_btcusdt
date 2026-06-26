@@ -33,47 +33,6 @@ Deployed as a Flask web application (suitable for platforms like Render.com), it
   - Web app keep-alive mechanism.
 - **Error Resilience**: Comprehensive try/except blocks, logging, and error email alerts.
 
-## Project Structure
-binfut_usdm_btcusdt-main.zip
-Read through all the content in this attached zip file of a small github repository and give me a detailed description summary of what the code does, which will be used to fill this repository's readme file.
-Output Rules - Give me the description in a markdown file syntax and not as a plain text (I need the final summary content in copy pastable markdown syntax )
-
-
-Thought for 10s
-# Binance USD-M Futures BTCUSDT Trading Bot
-
-A robust, automated trading bot for **Binance USD-M Futures** perpetual contracts on **BTCUSDT**, built with the `binance-futures-connector-python` library. The bot implements a complete trading strategy using EMA crossovers combined with candle pattern filters and ATR-based rules, along with position management, pyramiding, trailing stop-losses, and comprehensive monitoring.
-
-Deployed as a Flask web application (suitable for platforms like Render.com), it runs scheduled tasks, maintains a live dashboard, sends email notifications, and includes robust error handling and logging.
-
-## Key Features
-
-- **Real-time & Historical Data**: Fetches 1-minute klines via REST API and streams live updates via WebSocket.
-- **Technical Indicators**:
-  - EMA 5 and EMA 34 (on HL2).
-  - ATR (Average True Range) for volatility filtering.
-- **Trading Strategy**:
-  - **Long Entry**: EMA5 > EMA34 + specific candle momentum and range conditions.
-  - **Short Entry**: EMA34 > EMA5 + corresponding short conditions.
-  - Additional ATR-based gap thresholds and length filters.
-- **Position Management**:
-  - Market order entry.
-  - Initial Stop-Loss + Trailing Stop-Loss (TSL).
-  - Dynamic exit on crossover reversal or TSL/SL hits.
-  - Optional pyramiding (adding to winning positions).
-- **Risk Controls**:
-  - Isolated margin.
-  - Configurable leverage.
-  - Precision handling for price and quantity.
-- **Monitoring & Alerts**:
-  - Email notifications for order open/close, errors, daily reports, and startup (with public IP).
-  - Real-time trade logging and profit tracking.
-  - Web dashboard showing recent trades.
-- **Automation**:
-  - Background scheduler (APScheduler) runs core logic every 30 seconds.
-  - Daily report dumping.
-  - Web app keep-alive mechanism.
-- **Error Resilience**: Comprehensive try/except blocks, logging, and error email alerts.
 
 ## Project Structure
 binfut_usdm_btcusdt-main/
