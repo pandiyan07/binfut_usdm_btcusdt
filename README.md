@@ -36,12 +36,17 @@ Deployed as a Flask web application (suitable for platforms like Render.com), it
 
 ## Project Structure
 binfut_usdm_btcusdt-main/
+
 ├── main.py                          # Flask app, scheduler, main orchestration
 
 ├── data_fetcher.py                  # REST + WebSocket data fetching
+
 ├── indicator_calculation.py         # EMA & ATR calculations
+
 ├── trading_rules.py                 # Entry condition logic
+
 ├── trading_logic.py                 # Core trading state machine
+
 ├── order_placer.py                  # Market order + fallback SL placement
 ├── new_order_placer.py              # Generic order placement helper
 ├── order_closer.py                  # Position closing and order cancellation
