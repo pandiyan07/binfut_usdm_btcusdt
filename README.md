@@ -48,17 +48,29 @@ binfut_usdm_btcusdt-main/
 ├── trading_logic.py                 # Core trading state machine
 
 ├── order_placer.py                  # Market order + fallback SL placement
+
 ├── new_order_placer.py              # Generic order placement helper
+
 ├── order_closer.py                  # Position closing and order cancellation
+
 ├── misc_bin_func.py                 # Utilities (balance, leverage, precision, etc.)
+
 ├── emailer.py                       # Email notifications & daily reports
+
 ├── tsl_setter.py                    # Trailing Stop-Loss order handling
+
 ├── keeping_webapp_alive.py          # Ping to prevent Render sleep
+
 ├── trading_journal.py               # Trade logging (partial)
+
 ├── templates/                       # Flask HTML templates
+
 │   ├── btcusdt_binance_futures_homepage.html
+
 │   └── btcusdt_binance_futures_dummy_homepage.html
+
 ├── requirements.txt
+
 └── todo.txt
 
 
